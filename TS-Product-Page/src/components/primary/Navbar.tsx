@@ -56,7 +56,7 @@ const Navbar = () => {
           <CartIcon />
         </div>
         <div className="w-7 h-7 rounded-full hover:ring-2 hover:ring-orange cursor-pointer transition ease-in">
-          <img src='../../images/image-avatar.png' alt="avatar" />
+          <img src='/src/images/image-avatar.png' alt="avatar" />
         </div>
       </div>
     </div>
