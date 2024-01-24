@@ -12,8 +12,8 @@ const ProductInfoContext = createContext<IProductBio>({
 
 const ProductInfoContextProvider = ({children} : {children : any}) => {
     const infoValues:IProductBio = {
-        images:["./images/image-product-1.jpg", "./images/image-product-2.jpg", "./images/image-product-3.jpg", "./images/image-product-4.jpg"],
-        thumbnailImages:["./images/image-product-1-thumbnail.jpg", "./images/image-product-2-thumbnail.jpg", "./images/image-product-3-thumbnail.jpg", "./images/image-product-4-thumbnail.jpg"],
+        images:["/images/image-product-1.jpg", "/images/image-product-2.jpg", "/images/image-product-3.jpg", "/images/image-product-4.jpg"],
+        thumbnailImages:["/images/image-product-1-thumbnail.jpg", "/images/image-product-2-thumbnail.jpg", "/images/image-product-3-thumbnail.jpg", "/images/image-product-4-thumbnail.jpg"],
         title: "Fall Limited Edition Sneakers",
         price: "125",
         discount: 50,
