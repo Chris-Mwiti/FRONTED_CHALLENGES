@@ -61,8 +61,9 @@ export const ProductContext = createContext<TStoreContext>({
   orders: [] as TOrders[],
   isModalOpen: false,
   productActions: {
-    addProducts: (products: TProducts[]) => {},
+    addProducts: (products: TProducts[]) => { console.log(products)},
     getProduct: (productName: string) => {
+      console.log(productName)
        return {
         price: 0,
         image: {
@@ -78,9 +79,12 @@ export const ProductContext = createContext<TStoreContext>({
     removeAllProducts: () => {}, 
   },
   orderActions: {
-    createOrder: (orderItem: TOrders) => {},
+    createOrder: (orderItem: TOrders) => {
+      console.log(orderItem)
+    },
     listOrders: () => {return []},
     getOrder: (productName: string) => {
+      console.log(productName)
         return {
             orderId: "",
             product: {
@@ -97,8 +101,12 @@ export const ProductContext = createContext<TStoreContext>({
             quantity: 0
         }
     },
-   updateOrder: (orderId: string, quantity: number) => {},
-  deleteOrder: (productName:string) => {},
+   updateOrder: (orderId: string, quantity: number) => {
+    console.log(orderId, quantity)
+   },
+  deleteOrder: (productName:string) => {
+    console.log(productName)
+  },
   calculateTotal: () => 0
   },
   modalActions: {

@@ -1,6 +1,6 @@
 import axios from "axios"
 import { ProductContext, TProducts } from "../store/store"
-import { useContext, useEffect } from "react"
+import { useContext } from "react"
 import ProductContainer from "./ProductContainer";
 import { useQuery } from "@tanstack/react-query";
 import OrderContainer from "./OrderContainer";
@@ -9,7 +9,7 @@ import OrderContainer from "./OrderContainer";
 
 export default function Main() {
     const {productActions: {addProducts}} = useContext(ProductContext)
-    const {isLoading, isError, error, data} = useQuery({
+    const {isLoading} = useQuery({
         queryKey: ["Products"],
         queryFn: () => axios.get<TProducts[]>("http://localhost:1105/products").then((res) => {
             addProducts(res.data) 

@@ -1,5 +1,5 @@
 import { useContext } from "react"
-import { ProductContext, TProducts } from "../store/store"
+import { ProductContext } from "../store/store"
 import ProductCard from "./ProductCard"
 import OrderModal from "./OrderModal";
 

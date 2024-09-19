@@ -4,7 +4,7 @@ import { ReactSVG } from "react-svg";
 import OrderElement from "./OrderElement";
 
 export default function OrderContainer() {
-    const {orders, orderActions: {deleteOrder, calculateTotal}, modalActions: {openModal}} = useContext(ProductContext);
+    const {orders, orderActions: {calculateTotal}, modalActions: {openModal}} = useContext(ProductContext);
   return (
     <div className="w-full min-h-5 max-h-[350px] sm:w-[350px] rounded-md bg-white space-y-2 p-4">
         <p className="text-2xl text-amber-800 font-bold">{`Your Cart (${orders.length})`}</p>
